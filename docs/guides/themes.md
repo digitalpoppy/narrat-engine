@@ -149,7 +149,6 @@ export const myTheme: Theme = {
   css: MyThemeCSS,
   // The id is how the theme will be referred to in your narrat scripts
   id: 'my-theme',
-  default
   extendedConfig: {
     // In this example, we're using the extendedConfig option to change the size and position of the dialog panel. You can override any values in the config in this extendedConfig option.
     dialogPanel: {
