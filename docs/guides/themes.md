@@ -141,7 +141,7 @@ body {
 Then, create the theme file: `my-theme/index.ts`:
 
 ```ts
-import { Theme } from 'narrat';
+import type { Theme } from 'narrat';
 // We import our CSS file. Note that the `?inline` part in the path is important.
 import MyThemeCSS from './styles.css?inline';
 
@@ -149,14 +149,15 @@ export const myTheme: Theme = {
   css: MyThemeCSS,
   // The id is how the theme will be referred to in your narrat scripts
   id: 'my-theme',
-  default
   extendedConfig: {
     // In this example, we're using the extendedConfig option to change the size and position of the dialog panel. You can override any values in the config in this extendedConfig option.
-    dialogPanel: {
-      width: 900,
-      height: 720,
-      rightOffset: 150,
-      bottomOffset: 0,
+    common: {
+      dialogPanel: {
+        width: 900,
+        height: 720,
+        rightOffset: 150,
+        bottomOffset: 0,
+      },
     },
   }
 };
